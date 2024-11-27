@@ -1,0 +1,24 @@
+.GalleryBox {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;  
+    margin-top: 15vh;
+    column-gap: 10px;
+    row-gap: 5px;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.Image {
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, rgb(201, 113, 45), rgb(162, 156, 165)) border-box;
+    border-radius: 4px;
+    border: 4px solid transparent;
+    width: 340px;
+    height: 250px;
+    transition: transform .2s;
+}
+
+.Image:hover {
+    transform: scale(1.05); 
+}

@@ -1,0 +1,107 @@
+.ModalBox {
+    background-color: rgba(0, 0, 0, 0.8); /* Przyciemnione tło */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+.Modal {
+    position: relative;
+    background: rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+  
+.Modal::before {
+    filter: blur(3rem);
+    opacity: 1;
+}
+  
+.Modal::after, .Modal::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s spin linear infinite;
+}
+  
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.Modal img {
+    width: auto;
+    height: auto;
+    max-width: 98%;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+.ImageBox {
+    display: flex;
+    justify-content: center;
+}
+
+.Modal p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.CloseBtn {
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 0;
+}
+  
+.CloseBtn:hover {
+    color: #ffffff;
+}
+
+.AdditionsBox {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    background: linear-gradient(orange, gray);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

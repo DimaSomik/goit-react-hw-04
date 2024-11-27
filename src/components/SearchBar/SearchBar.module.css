@@ -1,0 +1,29 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+
+.FormBox {
+    width: 100vw;
+    height: 70px;
+    background: linear-gradient(219.3deg, rgb(149, 0, 199) 4.7%, rgb(130, 0, 226) 22.9%, rgb(95, 0, 199) 43.2%, rgb(70, 0, 199) 63.9%, rgb(5, 0, 199) 85.1%, rgb(0, 95, 199) 106.8%);
+    box-shadow: 0px 4px 10px rgb(161, 161, 161);
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.FormInput {
+    width: 30%;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 255, 255);
+}
